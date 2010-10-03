@@ -49,13 +49,13 @@ nmap <Up> gk
 set fo=l
 
 "statusline setup
-set statusline=%f       "tail of the filename
+""set statusline=%f       "tail of the filename
 
 "Git
-set statusline+=[%{GitBranch()}]
+""set statusline+=[%{GitBranch()}]
 
 "RVM
-set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''}
+""set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''}
 
 "display a warning if fileformat isnt unix
 "set statusline+=%#warningmsg#
@@ -90,14 +90,14 @@ set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''}
 "set statusline+=%{&paste?'[paste]':''}
 "set statusline+=%*
 
-set statusline+=%=      "left/right separator
+""set statusline+=%=      "left/right separator
 
 "set statusline+=%{StatuslineCurrentHighlight()}\ \ "current highlight
 
-set statusline+=%c,     "cursor column
-set statusline+=%l/%L   "cursor line/total lines
-set statusline+=\ %P    "percent through file
-set laststatus=2
+""set statusline+=%c,     "cursor column
+""set statusline+=%l/%L   "cursor line/total lines
+""set statusline+=\ %P    "percent through file
+set laststatus=1
 
 "turn off needless toolbar on gvim/mvim
 set guioptions-=T
@@ -220,8 +220,8 @@ set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
 
-set wildmode=list:longest   "make cmdline tab completion similar to bash
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+""set wildmode=list:longest   "make cmdline tab completion similar to bash
+""set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 
 "display tabs and trailing spaces
