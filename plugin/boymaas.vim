@@ -19,6 +19,8 @@ map \n          :cnext
 map \P :.!xclip -o  -selection clipboard<cr>
 map \Y :w !xclip -i  -selection clipboard<cr><cr>
 
+map ;; <c-^>
+
 map zz 
 
 colorscheme tango2
@@ -35,22 +37,11 @@ call pathogen#helptags()
 
 se pastetoggle=<F9>
 
-""" This is needed for MacOSX terminal within
-""" Tmux
-set notimeout		" don't timeout on mappings
-set ttimeout		" do timeout on terminal key codes
-set timeoutlen=100	" timeout after 100 msec
-
-"" Rails bindings
-map \R :!refresh-firefox
-map \rc :Rcontroller
-map \rv :Rview
-
 "" Folding
 se foldminlines=0
 
 """ Windows
-set winwidth=84
+""set winwidth=84
 " We have to have a winheight bigger than we want to set winminheight. But if
 " we set winheight to be huge before winminheight, the winminheight set will
 " fail.
@@ -58,7 +49,8 @@ set winwidth=84
 ""set winminheight=5
 ""set winheight=999"
 
-""" Powerline related settings XXX move to powerline.vim"
+""" Powerline related settings 
+""" XXX move to powerline.vim
 set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
