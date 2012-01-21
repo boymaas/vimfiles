@@ -994,7 +994,7 @@ if !exists("s:otl_loaded_functions")
     " before processing modelines...
     au BufNew,BufRead *.otl silent let &l:foldlevel=g:otl_initial_foldlevel
     " set up overrideable local settings
-    au BufNew,BufRead *.otl silent setlocal ts=4 sw=4 noet ai foldcolumn=1 sts=0
+    au BufNew,BufRead *.otl silent setlocal ts=2 sw=2 noet ai foldcolumn=1 sts=0
     " after processing modelines
 "   au BufWinEnter *.otl
 
