@@ -23,8 +23,16 @@ map ;; <c-^>
 
 map zz 
 
-colorscheme tango2
+"" Don't use ex-mode use gq for formatting
+map Q gq
+
+"colorscheme tango2
+colorscheme solarized
+se background=dark
 se nohls
+
+" show line where cursor is on
+se cursorline
 
 "" Fast window switchin
 map <C-Right> <C-w>l
@@ -41,13 +49,13 @@ se pastetoggle=<F9>
 se foldminlines=0
 
 """ Windows
-""set winwidth=84
+set winwidth=84
 " We have to have a winheight bigger than we want to set winminheight. But if
 " we set winheight to be huge before winminheight, the winminheight set will
 " fail.
-""set winheight=5
-""set winminheight=5
-""set winheight=999"
+set winheight=5
+set winminheight=5
+set winheight=999"
 
 """ Powerline related settings 
 """ XXX move to powerline.vim
