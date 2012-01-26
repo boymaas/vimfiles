@@ -9,12 +9,11 @@
 "
 "" quickly navigate to directory relative to file
 map \ls 	:cd <C-r>=expand("%:p:h")<CR>/:shell:cd -
+map \lc 	:cd <C-r>=expand("%:p:h")<CR>
 map \el 	:e <C-r>=expand("%:p:h")<CR>/
 map \q          :normal @q
 map \v          :e ~/.vim/plugin/boymaas.vim
 map \s          :source ~/.vim/plugin/boymaas.vim
-
-map \n          :cnext
 
 map \P :.!xclip -o  -selection clipboard<cr>
 map \Y :w !xclip -i  -selection clipboard<cr><cr>
