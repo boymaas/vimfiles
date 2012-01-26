@@ -50,7 +50,7 @@ function! RunTestFile(...)
 endfunction
 
 function! RunNearestTest()
-  call SweetVimRspecRunFocused()
+  call SweetVimRspecRun("Focused")
 endfunction
 
 " Run this file
