@@ -10,16 +10,15 @@
 "" quickly navigate to directory relative to file
 let mapleader=','
 
-
 map <leader>ls 	:cd <C-r>=expand("%:p:h")<CR>/:shell:cd -
 map <leader>lc 	:cd <C-r>=expand("%:p:h")<CR>
-map <leader>el 	:e <C-r>=expand("%:p:h")<CR>/
+map <leader>e 	:e <C-r>=expand("%:p:h")<CR>/
 map <leader>q          :normal @q
 map <leader>v          :e ~/.vim/plugin/boymaas.vim
 map <leader>s          :source ~/.vim/plugin/boymaas.vim
 
-map <leader>P :.!xclip -o  -selection clipboard<cr>
-map <leader>Y :w !xclip -i  -selection clipboard<cr><cr>
+map <leader>P "*p
+map <leader>Y "*y
 
 map ;; <c-^>
 
@@ -31,6 +30,10 @@ map <Right> :echo "no!"<cr>
 map <Up> :echo "no!"<cr>
 map <Down> :echo "no!"<cr>
 
+
+"" Quick jumping
+map <C-k> 10k
+map <C-j> 10j
 
 "" Don't use ex-mode use gq for formatting
 map Q gq
