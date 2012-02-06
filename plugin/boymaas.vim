@@ -8,26 +8,53 @@
 " a tmux session. (This took a few hours)
 "
 "" quickly navigate to directory relative to file
-map \ls 	:cd <C-r>=expand("%:p:h")<CR>/:shell:cd -
-map \lc 	:cd <C-r>=expand("%:p:h")<CR>
-map \el 	:e <C-r>=expand("%:p:h")<CR>/
-map \q          :normal @q
-map \v          :e ~/.vim/plugin/boymaas.vim
-map \s          :source ~/.vim/plugin/boymaas.vim
+let mapleader=','
 
-map \P :.!xclip -o  -selection clipboard<cr>
-map \Y :w !xclip -i  -selection clipboard<cr><cr>
+map <leader>ls 	:cd <C-r>=expand("%:p:h")<CR>/:shell:cd -
+map <leader>lc 	:cd <C-r>=expand("%:p:h")<CR>
+map <leader>e 	:e <C-r>=expand("%:p:h")<CR>/
+map <leader>q          :normal @q
+map <leader>v          :e ~/.vim/plugin/boymaas.vim
+map <leader>s          :source ~/.vim/plugin/boymaas.vim
+
+map <leader>P "*p
+map <leader>Y "*y
 
 map ;; <c-^>
 
 map zz 
 
+"" Need to get off this habit 
+map <Left> :echo "no!"<cr>
+map <Right> :echo "no!"<cr>
+map <Up> :echo "no!"<cr>
+map <Down> :echo "no!"<cr>
+
+
+"" Quick jumping
+map <C-k> 10k
+map <C-j> 10j
+
 "" Don't use ex-mode use gq for formatting
 map Q gq
 
-colorscheme tango2
-"colorscheme solarized
+" Make tab completion for files/buffers act like bash
+set wildmenu
+" use emacs-style tab completion when selecting files, etc
+set wildmode=longest,list
+
+" Keep more context when scrolling off the end of a buffer
+set scrolloff=3
+
+" Store temporary files in a central spot
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
+
+"colorscheme tango2
+colorscheme solarized
 se background=dark
+
 se nohls
 
 " show line where cursor is on
