@@ -100,3 +100,6 @@
 [submodule "bundle/sweet-rspec-vim"]
 	path = bundle/sweet-rspec-vim
 	url = https://github.com/duskhacker/sweet-rspec-vim.git
+[submodule "plugin/tabular"]
+	path = plugin/tabular
+	url = https://github.com/godlygeek/tabular.git
