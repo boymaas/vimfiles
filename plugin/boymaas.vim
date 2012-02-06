@@ -25,8 +25,8 @@ map zz 
 "" Don't use ex-mode use gq for formatting
 map Q gq
 
-"colorscheme tango2
-colorscheme solarized
+colorscheme tango2
+"colorscheme solarized
 se background=dark
 se nohls
 
