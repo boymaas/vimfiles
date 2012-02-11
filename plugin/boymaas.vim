@@ -59,6 +59,7 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 "colorscheme tango2
 colorscheme solarized
 se background=dark
+
 se nohls
 
 " show line where cursor is on
