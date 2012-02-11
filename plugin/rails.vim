@@ -26,7 +26,7 @@ function! ShowRoutes()
   " Delete everything
   :normal 1GdG
   " Put routes output in buffer
-  :0r! rake -s routes
+  :0r! bundle exec rake -s routes
   " Size window to number of lines (1 plus rake output length)
   "":exec ":normal " . line("$") . " _ "
   " Move cursor to bottom
@@ -43,7 +43,7 @@ function! RunTests(filename)
     " Write the file and run tests for the given filename
     :w
     :silent !echo;echo;echo;echo;echo
-    exec ":!bundle exec rspec " . a:filename
+    exec ":!bundle exec rspec -d " . a:filename
 endfunction
 
 function! SetTestFile()
