@@ -8,11 +8,11 @@
 " a tmux session. (This took a few hours)
 "
 "" quickly navigate to directory relative to file
-let mapleader=','
+let mapleader='\'
 
 map <leader>ls 	:cd <C-r>=expand("%:p:h")<CR>/:shell:cd -
 map <leader>lc 	:cd <C-r>=expand("%:p:h")<CR>
-map <leader>e 	:e <C-r>=expand("%:p:h")<CR>/
+map <leader>el 	:e <C-r>=expand("%:p:h")<CR>/
 map <leader>q          :normal @q
 map <leader>v          :e ~/.vim/plugin/boymaas.vim
 map <leader>s          :source ~/.vim/plugin/boymaas.vim
@@ -25,10 +25,10 @@ map ;; <c-^>
 map zz 
 
 "" Need to get off this habit 
-map <Left> :echo "no!"<cr>
-map <Right> :echo "no!"<cr>
-map <Up> :echo "no!"<cr>
-map <Down> :echo "no!"<cr>
+" map <Left> :echo "no!"<cr>
+" map <Right> :echo "no!"<cr>
+" map <Up> :echo "no!"<cr>
+" map <Down> :echo "no!"<cr>
 
 
 "" Quick jumping
