@@ -21,6 +21,7 @@ map <leader>P "*p
 map <leader>Y "*y
 
 map ;; <c-^>
+" map <leader><leader> <c-^>
 
 map zz 
 
@@ -37,6 +38,10 @@ map <C-j> 10j
 
 "" Don't use ex-mode use gq for formatting
 map Q gq
+
+" Configure line numbers with 5 chars
+set number
+set numberwidth=5
 
 " Make tab completion for files/buffers act like bash
 set wildmenu
