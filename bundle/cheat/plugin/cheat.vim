@@ -109,10 +109,10 @@ endf
 comm! -nargs=1 -complete=custom,CheatCompletion Cheat :call Cheat(<q-args>)
 comm! CheatCurrent :call CheatCurrent()
 comm! CheatRecent :call Cheat("recent")
-nmap <leader>C  :call Cheat("")<CR>
+" nmap <leader>C  :call Cheat("")<CR>
 
-" Ask for cheatsheet for the word under cursor
-nmap <leader>ch :call CheatCurrent()<CR>
-vmap <leader>ch <ESC>:call CheatCurrent()<CR>
+" " Ask for cheatsheet for the word under cursor
+" nmap <leader>ch :call CheatCurrent()<CR>
+" vmap <leader>ch <ESC>:call CheatCurrent()<CR>
 
 let g:loaded_cheats = "1.3"
