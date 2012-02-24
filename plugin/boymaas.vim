@@ -56,8 +56,8 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 
-"colorscheme tango2
-colorscheme solarized
+colorscheme tango2
+"colorscheme solarized
 se background=dark
 
 se nohls
