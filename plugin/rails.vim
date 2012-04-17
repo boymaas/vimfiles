@@ -11,9 +11,9 @@ map <leader>gs :CommandTFlush<cr>\|:CommandT app/stylesheets<cr>
 map <leader>gt :CommandTFlush<cr>\|:CommandT spec<cr>
 map <leader>go :e ~/Personal/Planning/gtd.org<cr>
 
-map <leader>gr :topleft :split config/routes.rb<cr>
-map <leader>gg :topleft 100 :split Gemfile<cr>
-map <leader>gd :topleft 100 :vsplit db/schema.rb<cr>
+map <leader>gr :e config/routes.rb<cr>
+map <leader>gg :e Gemfile<cr>
+map <leader>gd :e db/schema.rb<cr>
 
 " ------------------------------------------------------------------------------------------------------
 " Show rails routes in a seperate buffer
