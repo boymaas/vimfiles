@@ -43,7 +43,7 @@ function! RunTests(filename)
     " Write the file and run tests for the given filename
     :w
     :silent !echo;echo;echo;echo;echo
-    exec ":!bundle exec rspec -d " . a:filename
+    exec ":!bundle exec rspec -r pry --format documentation -d " . a:filename
 endfunction
 
 function! SetTestFile()
