@@ -89,6 +89,8 @@ map <leader>a :call RunTests('spec')<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! OpenTestAlternate()
   let new_file = AlternateForCurrentFile()
+  exec ':only'
+  exec ':vsplit'
   exec ':e ' . new_file
 endfunction
 function! AlternateForCurrentFile()
