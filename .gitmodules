@@ -1,9 +1,6 @@
 [submodule "snippets"]
 	path = snippets
 	url = git://github.com/akitaonrails/snipmate-snippets.git
-[submodule "bundle/rails"]
-	path = bundle/rails
-	url = git://github.com/tpope/vim-rails.git
 [submodule "bundle/cucumber"]
 	path = bundle/cucumber
 	url = git://github.com/tpope/vim-cucumber.git
@@ -19,21 +16,12 @@
 [submodule "bundle/NERD_commenter"]
 	path = bundle/NERD_commenter
 	url = git://github.com/scrooloose/nerdcommenter.git
-[submodule "bundle/ragtag"]
-	path = bundle/ragtag
-	url = git://github.com/tpope/vim-ragtag.git
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
 [submodule "bundle/markdown"]
 	path = bundle/markdown
 	url = git://github.com/tpope/vim-markdown.git
-[submodule "bundle/vividchalk"]
-	path = bundle/vividchalk
-	url = git://github.com/tpope/vim-vividchalk.git
-[submodule "bundle/git"]
-	path = bundle/git
-	url = git://github.com/tpope/vim-git.git
 [submodule "bundle/endwise"]
 	path = bundle/endwise
 	url = git://github.com/tpope/vim-endwise.git
@@ -43,12 +31,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
-[submodule "bundle/pastie"]
-	path = bundle/pastie
-	url = git://github.com/tpope/vim-pastie.git
-[submodule "bundle/textile"]
-	path = bundle/textile
-	url = git://github.com/timcharper/textile.vim.git
 [submodule "bundle/vim-ruby"]
 	path = bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
@@ -91,15 +73,6 @@
 [submodule "bundle/vim-orgmode"]
 	path = bundle/vim-orgmode
 	url = https://github.com/jceb/vim-orgmode.git
-[submodule "bundle/vim-speeddating"]
-	path = bundle/vim-speeddating
-	url = https://github.com/tpope/vim-speeddating.git
-[submodule "bundle/utl"]
-	path = bundle/utl
-	url = https://github.com/vim-scripts/utl.vim.git
-[submodule "bundle/sweet-rspec-vim"]
-	path = bundle/sweet-rspec-vim
-	url = https://github.com/duskhacker/sweet-rspec-vim.git
 [submodule "plugin/tabular"]
 	path = plugin/tabular
 	url = https://github.com/godlygeek/tabular.git
