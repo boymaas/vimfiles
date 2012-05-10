@@ -4,4 +4,3 @@ tags
 *.sw?
 .VimballRecord
 .netrwhist
-bundle/vim-peepopen

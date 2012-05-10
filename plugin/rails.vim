@@ -15,7 +15,7 @@ map <leader>gr :topleft :split config/routes.rb<cr>
 map <leader>gg :topleft 100 :split Gemfile<cr>
 map <leader>gd :topleft 100 :vsplit db/schema.rb<cr>
 
-map <leader>gt :CommandTFlush<cr>\|:CommandTTag<cr>
+" map <leader>gt :CommandTFlush<cr>\|:CommandTTag<cr>
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
