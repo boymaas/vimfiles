@@ -5,7 +5,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+" Bundle 'gmarik/vundle'
 
 Bundle 'akitaonrails/snipmate-snippets'
 Bundle 'tpope/vim-cucumber'
@@ -31,6 +31,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-eunuch'
 Bundle 'jceb/vim-orgmode'
 Bundle 'godlygeek/tabular'
+Bundle 'altercation/vim-colors-solarized'
 
 ""load pathogen managed plugins
 "call pathogen#runtime_append_all_bundles()
@@ -198,25 +199,6 @@ map <A-o> :copen<CR>
 map <A-q> :cclose<CR>
 map <A-j> :cnext<CR>
 map <A-k> :cprevious<CR>
-
-"snipmate setup
-try
-  source ~/.vim/snippets/support_functions.vim
-catch
-  source ~/vimfiles/snippets/support_functions.vim
-endtry
-autocmd vimenter * call s:SetupSnippets()
-function! s:SetupSnippets()
-    "if we're in a rails env then read in the rails snippets
-    if filereadable("./config/environment.rb")
-        call ExtractSnips("~/.vim/snippets/ruby-rails", "ruby")
-        call ExtractSnips("~/.vim/snippets/eruby-rails", "eruby")
-    endif
-
-    call ExtractSnips("~/.vim/snippets/html", "eruby")
-    call ExtractSnips("~/.vim/snippets/html", "xhtml")
-    call ExtractSnips("~/.vim/snippets/html", "php")
-endfunction
 
 "visual search mappings
 function! s:VSetSearch()
