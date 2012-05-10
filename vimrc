@@ -1,8 +1,39 @@
 "necessary on some Linux distros for pathogen to properly load bundles
 filetype off
 
-"load pathogen managed plugins
-call pathogen#runtime_append_all_bundles()
+" Vundle setup
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'akitaonrails/snipmate-snippets'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-endwise'
+Bundle 'akitaonrails/snipmate.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'ervandew/supertab'
+Bundle 'hallison/vim-ruby-sinatra'
+Bundle 'vim-scripts/VimClojure'
+Bundle 'vim-scripts/Command-T'
+Bundle 'tpope/vim-commentary'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-eunuch'
+Bundle 'jceb/vim-orgmode'
+Bundle 'godlygeek/tabular'
+
+""load pathogen managed plugins
+"call pathogen#runtime_append_all_bundles()
 
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
