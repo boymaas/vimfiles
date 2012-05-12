@@ -5,8 +5,9 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" Bundle 'gmarik/vundle'
+Bundle 'gmarik/vundle'
 
+Bundle 'akitaonrails/snipmate.vim.git'
 Bundle 'akitaonrails/snipmate-snippets'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
