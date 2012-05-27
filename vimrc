@@ -7,31 +7,48 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'akitaonrails/snipmate.vim.git'
-Bundle 'akitaonrails/snipmate-snippets'
+" File navigation
+Bundle 'vim-scripts/Command-T'
+
+" Matchit
+Bundle 'matchit.zip'
+Bundle 'vim-scripts/paredit.vim'
+
+" Snipmate
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "snipmate-snippets"
+Bundle "garbas/vim-snipmate"
+
+" Tim Pope's goodies
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-endwise'
-Bundle 'akitaonrails/snipmate.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'ervandew/supertab'
-Bundle 'hallison/vim-ruby-sinatra'
-Bundle 'vim-scripts/VimClojure'
-Bundle 'vim-scripts/Command-T'
 Bundle 'tpope/vim-commentary'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-eunuch'
+
+" Syntastic
+Bundle 'scrooloose/syntastic'
+
+" Filetypes
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'hallison/vim-ruby-sinatra'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'jceb/vim-orgmode'
+Bundle 'vim-scripts/VimClojure'
+Bundle 'cakebaker/scss-syntax.vim'
+
+" Editing enhancements
+Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'mileszs/ack.vim'
+
+" Colorschemes
 Bundle 'altercation/vim-colors-solarized'
 
 ""load pathogen managed plugins

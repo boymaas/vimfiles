@@ -72,7 +72,6 @@ map <C-Up> <C-w>k
 map <C-Down> <C-w>j
 
 """
-call pathogen#helptags()
 
 se pastetoggle=<F9>
 
