@@ -113,7 +113,7 @@ function! OpenTestAlternate()
   exec ':e ' . new_file
 endfunction
 function! AlternateForCurrentFile()
-  let current_file = expand("%")
+  let current_file = expand("%:.")
   let new_file = current_file
   let in_spec = match(current_file, '^spec/') != -1
   let going_to_spec = !in_spec
