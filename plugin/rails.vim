@@ -43,35 +43,16 @@ map <leader>gR :call ShowRoutes()<cr>
 " ------------------------------------------------------------------------------------------------------
 " Run the tests
 " ------------------------------------------------------------------------------------------------------
-      
 function! RunTests(filename)
     " Write the file and run tests for the given filename
     :w
-    " :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    " :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    " :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    " :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    if match(a:filename, '\.feature$') != -1
-        exec ":!script/features " . a:filename
-    else
-        if filereadable("script/test")
-            exec ":!script/test " . a:filename
-        elseif filereadable("Gemfile")
-            exec ":!bundle exec rspec -r pry --format documentation -c -d " . a:filename
-        else
-            exec ":!rspec --color " . a:filename
-        end
-    end
+    :silent !echo;echo;echo;echo;echo
+    exec ":!bundle exec rspec -r pry --format documentation -c -d " . a:filename
 endfunction
 
-let t:grb_test_file=""
-let t:grb_test_file_cammand_suffix=""
-function! SetTestFile(command_suffix)
+function! SetTestFile()
     " Set the spec file that tests will be run for.
     let t:grb_test_file=@%
-    let t:grb_test_file_cammand_suffix=a:command_suffix
 endfunction
 
 function! RunTestFile(...)
@@ -84,11 +65,11 @@ function! RunTestFile(...)
     " Run the tests for the previously-marked file.
     let in_spec_file = match(expand("%"), '_spec.rb$') != -1
     if in_spec_file
-        call SetTestFile(command_suffix)
+        call SetTestFile()
     elseif !exists("t:grb_test_file")
         return
     end
-    call RunTests(t:grb_test_file . t:grb_test_file_cammand_suffix)
+    call RunTests(t:grb_test_file . command_suffix)
 endfunction
 
 function! RunNearestTest()
@@ -97,11 +78,11 @@ function! RunNearestTest()
 endfunction
 
 " Run this file
-map <leader>t :call RunTestFile()<cr>
-" Run only the example under the cursor
-map <leader>T :call RunNearestTest()<cr>
-" Run all test files
-map <leader>a :call RunTests('spec')<cr>
+" map <leader>t :call RunTestFile()<cr>
+" " Run only the example under the cursor
+" map <leader>T :call RunNearestTest()<cr>
+" " Run all test files
+" map <leader>a :call RunTests('spec')<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SWITCH BETWEEN TEST AND PRODUCTION CODE
@@ -113,7 +94,7 @@ function! OpenTestAlternate()
   exec ':e ' . new_file
 endfunction
 function! AlternateForCurrentFile()
-  let current_file = expand("%:.")
+  let current_file = expand("%")
   let new_file = current_file
   let in_spec = match(current_file, '^spec/') != -1
   let going_to_spec = !in_spec
@@ -146,4 +127,4 @@ function! PromoteToLet()
   :normal ==
 endfunction
 :command! PromoteToLet :call PromoteToLet()
-:map <leader>p :PromoteToLet<cr>
+" :map <leader>p :PromoteToLet<cr>

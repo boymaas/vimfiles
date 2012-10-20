@@ -5,51 +5,37 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+" Bundle 'gmarik/vundle'
 
-" File navigation
-Bundle 'vim-scripts/Command-T'
-
-" Matchit
-Bundle 'matchit.zip'
-Bundle 'vim-scripts/paredit.vim'
-
-" Snipmate
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "snipmate-snippets"
-Bundle "garbas/vim-snipmate"
-
-" Tim Pope's goodies
+Bundle 'akitaonrails/snipmate-snippets'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-eunuch'
-
-" Syntastic
+Bundle 'akitaonrails/snipmate.vim'
 Bundle 'scrooloose/syntastic'
-
-" Filetypes
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'hallison/vim-ruby-sinatra'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'jceb/vim-orgmode'
-Bundle 'vim-scripts/VimClojure'
+Bundle 'tpope/vim-unimpaired'
 Bundle 'cakebaker/scss-syntax.vim'
-
-" Editing enhancements
-Bundle 'ervandew/supertab'
-Bundle 'godlygeek/tabular'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'mileszs/ack.vim'
-
-" Colorschemes
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'ervandew/supertab'
+Bundle 'hallison/vim-ruby-sinatra'
+Bundle 'vim-scripts/VimClojure'
+Bundle 'vim-scripts/Command-T'
+Bundle 'tpope/vim-commentary'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-eunuch'
+Bundle 'jceb/vim-orgmode'
+Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-rails'
+Bundle 'benmills/vimux'
+" Bundle 'skalnik/vim-vroom'
+Bundle 'jgdavey/vim-turbux'
 
 ""load pathogen managed plugins
 "call pathogen#runtime_append_all_bundles()
@@ -139,6 +125,14 @@ syntax on
 set mouse=a
 set ttymouse=xterm2
 
+set ttimeoutlen=50
+
+if &term =~ "xterm" || &term =~ "screen"
+  let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
+  let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
+  let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
+endif
+
 "hide buffers when not displayed
 set hidden
 
@@ -188,8 +182,8 @@ endif
 " else in your ~/.vimrc file, such as:
 " nmap <silent> <Leader>q <Plug>PeepOpen
 
-silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
-nnoremap <silent> <C-f> :call FindInNERDTree()<CR> 
+" silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
+" nnoremap <silent> <C-f> :call FindInNERDTree()<CR> 
 
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
