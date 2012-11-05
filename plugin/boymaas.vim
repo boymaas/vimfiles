@@ -12,7 +12,7 @@ let mapleader='\'
 
 map <leader>ls 	:cd <C-r>=expand("%:p:h")<CR>/:shell:cd -
 map <leader>lc 	:cd <C-r>=expand("%:p:h")<CR>
-" map <leader>el 	:e <C-r>=expand("%:p:h")<CR>/
+map <leader>el 	:e <C-r>=expand("%:p:h")<CR>/
 map <leader>q          :normal @q
 map <leader>v          :e ~/.vim/plugin/boymaas.vim
 map <leader>s          :source ~/.vim/plugin/boymaas.vim

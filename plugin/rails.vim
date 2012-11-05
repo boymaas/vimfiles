@@ -78,11 +78,11 @@ function! RunNearestTest()
 endfunction
 
 " Run this file
-" map <leader>t :call RunTestFile()<cr>
-" " Run only the example under the cursor
-" map <leader>T :call RunNearestTest()<cr>
-" " Run all test files
-" map <leader>a :call RunTests('spec')<cr>
+map <leader>t :call RunTestFile()<cr>
+" Run only the example under the cursor
+map <leader>T :call RunNearestTest()<cr>
+" Run all test files
+map <leader>a :call RunTests('spec')<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SWITCH BETWEEN TEST AND PRODUCTION CODE
@@ -98,7 +98,7 @@ function! AlternateForCurrentFile()
   let new_file = current_file
   let in_spec = match(current_file, '^spec/') != -1
   let going_to_spec = !in_spec
-  let in_app = match(current_file, '\<controllers\>') != -1 || match(current_file, '\<models\>') != -1 || match(current_file, '\<views\>') != -1
+  let in_app = match(current_file, '\<controllers\>') != -1 || match(current_file, '\<models\>') != -1 || match(current_file, '\<views\>') != -1 || match(current_file, '\<contexts\>')
   if going_to_spec
     if in_app
       let new_file = substitute(new_file, '^app/', '', '')
@@ -127,4 +127,4 @@ function! PromoteToLet()
   :normal ==
 endfunction
 :command! PromoteToLet :call PromoteToLet()
-" :map <leader>p :PromoteToLet<cr>
+:map <leader>P :PromoteToLet<cr>
