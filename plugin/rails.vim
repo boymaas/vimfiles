@@ -19,6 +19,9 @@ map <leader>gd :topleft 100 :vsplit db/schema.rb<cr>
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
+set wildignore+=*.o,*.obj,.git,target/**
+
+
 " ------------------------------------------------------------------------------------------------------
 " Show rails routes in a seperate buffer
 " ------------------------------------------------------------------------------------------------------
@@ -89,8 +92,8 @@ map <leader>a :call RunTests('spec')<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! OpenTestAlternate()
   let new_file = AlternateForCurrentFile()
-  exec ':only'
-  exec ':vsplit'
+  " exec ':only'
+  " exec ':vsplit'
   exec ':e ' . new_file
 endfunction
 function! AlternateForCurrentFile()
