@@ -34,8 +34,8 @@ Bundle 'jceb/vim-orgmode'
 Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-rails'
-" Bundle 'benmills/vimux'
-" Bundle 'skalnik/vim-vroom'
+Bundle 'benmills/vimux'
+Bundle 'skalnik/vim-vroom'
 " Bundle 'jgdavey/vim-turbux'
 
 ""load pathogen managed plugins

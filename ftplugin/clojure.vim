@@ -8,7 +8,7 @@ function! ClojureAlternateForCurrentFile()
     let current_dir = substitute(current_dir, '^src/', 'test/', '') . '/test'
   else
     let current_dir = substitute(current_dir, '^test/', 'src/', '')
-    let current_dir = substitute(current_dir, '/test$', '', '')
+    let current_dir = substitute(current_dir, '/test/\?$', '', '')
   endif
   return current_dir . '/' . current_file
 endfunction
