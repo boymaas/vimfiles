@@ -23,7 +23,6 @@ Bundle 'mileszs/ack.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'ervandew/supertab'
 Bundle 'hallison/vim-ruby-sinatra'
-Bundle 'vim-scripts/VimClojure'
 Bundle 'vim-scripts/paredit.vim'
 Bundle 'vim-scripts/Command-T'
 Bundle 'tpope/vim-commentary'
@@ -36,6 +35,10 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-rails'
 Bundle 'benmills/vimux'
 Bundle 'skalnik/vim-vroom'
+" VimClojure replacemant
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-classpath'
+Bundle 'guns/vim-clojure-static'
 " Bundle 'jgdavey/vim-turbux'
 
 ""load pathogen managed plugins
